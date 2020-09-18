@@ -4,7 +4,8 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 def start(update, context):
     text = (
         f"Hola {update.effective_chat.first_name} {update.effective_chat.last_name},\n"
-        f"bienvenido a nuestro bot para la hacienda en Linares Alcantara \n"
+        f"Bienvenido a nuestro bot para la hacienda en Francisco Linares Alcantara. \n"
+        f"Digite en la opcion que anda buscando"
     )
     context.bot.send_message(chat_id=update.effective_chat.id, text=text, reply_markup=menuKeyboard())
 
@@ -12,7 +13,7 @@ def start(update, context):
 def menu(update):
     query = update.callback_query
     query.answer()
-    query.edit_message_text(text="Escoha la opcion a usar:", reply_markup=menuKeyboard())
+    query.edit_message_text(reply_markup=menuKeyboard())
 
 
 def menuSolicitud(update):

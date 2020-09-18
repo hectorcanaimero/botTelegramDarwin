@@ -13,7 +13,6 @@ dp = Dispatcher(bot, None, use_context=True)
 dp.add_handler(CommandHandler("start", start))
 dp.add_handler(CallbackQueryHandler(menu, pattern='main'))
 dp.add_handler(CallbackQueryHandler(menuSolicitud, pattern='m1'))
-# Requisitos | Solicitudes
 dp.add_handler(CommandHandler('poll', sendDocument))
 dp.add_handler(CommandHandler('prueba', sendMessage))
 
