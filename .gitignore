@@ -47,7 +47,9 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+
 .serverless/
+
 # Translations
 *.mo
 *.pot
