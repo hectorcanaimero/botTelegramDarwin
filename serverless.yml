@@ -1,4 +1,4 @@
-service: telegram-bot
+service: darwin
 
 provider:
   name: aws
