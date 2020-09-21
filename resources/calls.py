@@ -38,15 +38,15 @@ def callback(update, context):
     if data == 'm1_1':
         query.edit_message_text(text='Requisitos para la Licencia de Licores')
         context.bot.send_photo(chat_id=update.effective_chat.id,
-                               photo=open(path.join(public, 'images', '01.png'), 'rb'))
-        query.edit_message_text(text='', reply_markup=return_main_menu_keyboard())
+                               photo=open(path.join(public, 'images', '01.png'), 'rb'),
+                               reply_markup=return_main_menu_keyboard())
     if data == 'm1_2':
         query.edit_message_text(text='Requisitos para la Licencia de Actividad Economica')
         context.bot.send_photo(chat_id=update.effective_chat.id,
-                               photo=open(path.join(public, 'images', '01.png'), 'rb'))
-        query.edit_message_text(text='', reply_markup=return_main_menu_keyboard())
+                               photo=open(path.join(public, 'images', '01.png'), 'rb'),
+                               reply_markup=return_main_menu_keyboard())
 
 
 def return_main_menu_keyboard():
-    keyboard = [[InlineKeyboardButton("Denuncias", callback_data='m2')]]
+    keyboard = [[InlineKeyboardButton("Regresar al Menu", callback_data='main')]]
     return InlineKeyboardMarkup(keyboard)
